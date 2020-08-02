@@ -14,12 +14,14 @@ export const getUserProfileActions = createAsyncAction(
 )<string, UserProfile, AxiosError>();
 
 const getGithubUserData = async (username: string) => {
-  const response = await axios.get(`https://api.github.com/users/${username}`);
+  const response = await axios.get<UserProfile>(
+    `https://api.github.com/users/${username}`
+  );
   return response.data;
 };
 
 function* getUserProfileSaga(
-  action: ActionType<typeof getUserProfileActions.request>
+  action: ReturnType<typeof getUserProfileActions.request>
 ) {
   try {
     const data: AxiosResponse<any> = yield call(

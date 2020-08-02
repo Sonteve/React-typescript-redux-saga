@@ -1,7 +1,3 @@
-typescript에 redux-saga로 github api 비동기 로직을 처리하는 github userInfo Search App 입니다.
-
-모듈안에서 용도에 따라 action, type, reducer, api 파일로 나눌 예정.
-
 ## TypeScript Redux-Saga
 
 `Redux Saga는 redux-thunk같이 서버에 데이터를 요청하거나 보내는 비동기처리를 할때 많이 사용 되는 라이브러리이다. Redux-saga는 액션을 모니터링 하고있다가 그 액션이 발생하면 우리가 설정 해 놓은 특정 작업을 하는방식으로 사용된다.`
