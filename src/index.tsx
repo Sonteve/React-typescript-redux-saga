@@ -9,12 +9,14 @@ import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 
+// 미들웨어를 생성한다.
 const sagaMiddleware = createSagaMiddleware();
+// applyMiddleware를 사용하여 만든 미들웨어를 적용해준다.
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
-
+// 모듈 별 사가를 모아서 만든 rootSaga를 등록하여 실행한다.
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
@@ -24,7 +26,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
