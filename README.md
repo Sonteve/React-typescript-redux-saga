@@ -85,6 +85,10 @@ dispatch(getData());
 
 ## 이번 프로젝트에서는 github API를 이용하여 username을 입력받아 그 값을 넣어 api요청을 하여 유저정보를 받아와서 화면에 출력해볼것이다.
 
+## 실행화면
+
+![](https://blogfiles.pstatic.net/20200804_186/home1609_1596546105976NWfVa_PNG/sagaResult.png?type=w2)
+
 ## 폴더 구조
 
 ![](https://blogfiles.pstatic.net/20200803_214/home1609_1596433957135yNn59_PNG/saga-drSt.png?type=w2)
